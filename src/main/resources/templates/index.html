@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java URL Shortener</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>URL Shortener (Java)</h1>
+    <form action="/shorten" method="post">
+        <input type="text" name="longUrl" placeholder="Enter long URL..." required>
+        <button type="submit">Shorten</button>
+    </form>
+
+    <div class="result">
+        <p th:if="${shortUrl}">Short URL: <a th:href="@{${shortUrl}}" th:text="${shortUrl}"></a></p>
+    </div>
+</div>
+</body>
+</html>
